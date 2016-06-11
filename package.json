@@ -19,10 +19,11 @@
   "homepage": "https://github.com/JustClear/Insplash",
   "dependencies": {
     "react": "^15.0.2",
-    "react-native": "^0.26.0",
+    "react-native": "^0.27.2",
     "react-native-blur": "^0.8.0",
     "react-native-parallax": "^0.2.2",
     "react-native-parallax-scroll-view": "^0.18.2",
+    "react-native-swiper": "^1.4.5",
     "unsplash-js": "^4.1.0"
   }
 }
