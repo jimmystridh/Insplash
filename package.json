@@ -1,0 +1,28 @@
+{
+  "name": "Insplash",
+  "version": "0.0.1",
+  "description": "A Unsplash(https://unsplash.com/) app implemented using React Native",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustClear/Insplash.git"
+  },
+  "keywords": [
+    "react",
+    "react native",
+    "unsplash"
+  ],
+  "author": "JustClear",
+  "license": "MIT",
+  "homepage": "https://github.com/JustClear/Insplash",
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-native": "^0.26.0",
+    "react-native-blur": "^0.8.0",
+    "react-native-parallax": "^0.2.2",
+    "react-native-parallax-scroll-view": "^0.18.2",
+    "unsplash-js": "^4.1.0"
+  }
+}
