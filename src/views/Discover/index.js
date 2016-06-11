@@ -26,6 +26,7 @@ export default class Discover extends Component {
         unsplash.categories.listCategories()
         .then(response => response.json())
         .then(categories => {
+            console.log(categories);
             this.setState({
                 categories: categories,
             });
