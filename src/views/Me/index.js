@@ -15,10 +15,10 @@ import {
 // components
 // import { BlurView } from 'react-native-blur';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
-import Close from '../components/Close';
+import Close from '../../components/Close';
 
 // api
-import unsplash, { authenticationUrl } from '../unsplash';
+import unsplash, { authenticationUrl } from '../../unsplash';
 
 export default class Profile extends Component {
     constructor(props) {

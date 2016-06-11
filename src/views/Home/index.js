@@ -10,11 +10,11 @@ import {
 } from 'react-native';
 
 // components
-import Loading from '../components/Loading';
-import PhotoList from '../components/PhotoList';
-import Header from '../components/Header';
+import Loading from '../../components/Loading';
+import PhotoList from '../../components/PhotoList';
+import Header from '../../components/Header';
 // api
-import unsplash from '../unsplash';
+import unsplash from '../../unsplash';
 
 export default class Home extends Component {
     constructor(props) {

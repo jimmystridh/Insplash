@@ -13,7 +13,7 @@ import {
 // views
 import Home from './Home';
 import Discover from './Discover';
-import Profile from './Profile';
+import Me from './Me';
 
 export default class Splash extends Component {
     constructor(props) {
@@ -65,7 +65,7 @@ export default class Splash extends Component {
                         });
                     } }
                 >
-                { this.renderProfileView() }
+                { this.renderMeView() }
                 </TabBarIOS.Item>
             </TabBarIOS>
         );
@@ -102,9 +102,9 @@ export default class Splash extends Component {
             />
         );
     }
-    renderProfileView() {
-        let defaultName = 'Profile';
-        let defaultComponent = Profile;
+    renderMeView() {
+        let defaultName = 'Me';
+        let defaultComponent = Me;
         return (
             <Navigator
                 initialRoute={{ name: defaultName, component: defaultComponent }}
