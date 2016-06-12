@@ -71,7 +71,6 @@ export default class Home extends Component {
                     dataSource={ this.state.dataSource }
                     navigator={this.props.navigator}
                 ></PhotoList>
-                <Text>Home</Text>
             </View>
         );
     }
@@ -85,7 +84,8 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#eee'
+        backgroundColor: '#eee',
+        paddingBottom: 49,
     },
     listView: {
         flex: 1,
