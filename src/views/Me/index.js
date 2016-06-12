@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 // components
-// import { BlurView } from 'react-native-blur';
+import { BlurView, VibrancyView } from 'react-native-blur';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
 import Close from '../../components/Close';
 
@@ -64,9 +64,11 @@ export default class Profile extends Component {
                 parallaxHeaderHeight={ 300 }
                 renderBackground={() => (
                     <Image
-                        style={{ width: window.width, height: 300, }}
+                        style={{ width: width, height: 300, }}
                         source={{ uri: 'https://images.unsplash.com/photo-1465636360230-1255730fa033?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=2ee7647b3a0ffe01816a0f7f0e209b75' }}
-                    ></Image>
+                    >
+                    <BlurView blurType="light" style={ styles.blur }></BlurView>
+                    </Image>
                 )}
                 renderForeground={() => (
                     <View style={{ height: 300, flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -124,7 +126,7 @@ export default class Profile extends Component {
     }
 }
 
-const window = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {
@@ -132,15 +134,21 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
+    blur: {
+        flex: 1,
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+        borderWidth: 0,
+    },
     webview: {
         // flex: 1,
-        width: 375,
+        width: width,
         height: 500,
         backgroundColor: '#ddd'
     },
     stickySection: {
         height: 64,
-        width: window.width,
+        width: width,
         justifyContent: 'flex-end',
         backgroundColor: '#fff',
     },
@@ -152,7 +160,7 @@ const styles = StyleSheet.create({
     fixedSectionText: {
         position: 'absolute',
         bottom: 12,
-        width: window.width,
+        width: width,
         fontSize: 20,
         textAlign: 'center',
     },
