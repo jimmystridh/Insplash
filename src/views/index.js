@@ -15,13 +15,13 @@ import Home from './Home';
 import Discover from './Discover';
 import Me from './Me';
 
-export default class Splash extends Component {
+export default class Main extends Component {
     constructor(props) {
         super();
         this.state = {
             splashUrl: '',
             splashLoading: true,
-            selectedTab: 'Splash'
+            selectedTab: 'Photos'
         };
     }
     componentDidMount() {
@@ -35,11 +35,11 @@ export default class Splash extends Component {
                 style={ styles.tabBar }
             >
                 <TabBarIOS.Item
-                    title="Splash"
-                    selected={ this.state.selectedTab === 'Splash' }
+                    title="Photos"
+                    selected={ this.state.selectedTab === 'Photos' }
                     onPress={ () => {
                         this.setState({
-                            selectedTab: 'Splash'
+                            selectedTab: 'Photos'
                         });
                     } }
                 >

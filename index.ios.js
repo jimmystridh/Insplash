@@ -12,12 +12,12 @@ import {
     View
 } from 'react-native';
 
-import Splash from './src/views/Splash.js';
+import Main from './src/views';
 
 class Insplash extends Component {
     render() {
         return (
-            <Splash></Splash>
+            <Main></Main>
         );
     }
 }
