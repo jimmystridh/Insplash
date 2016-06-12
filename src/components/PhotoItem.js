@@ -12,12 +12,13 @@ import {
 
 // components
 import PhotoDetail from './PhotoDetail';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class PhotoItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            //
+            isLiked: false,
         };
     }
     render() {
@@ -34,7 +35,7 @@ export default class PhotoItem extends Component {
                             // defaultSource={{ uri: photo.urls.regular }}
                         />
                     </TouchableOpacity>
-                    <View style={{ flexDirection: 'row', padding: 12, backgroundColor: '#fff', }}>
+                    <View style={ styles.info }>
                         <TouchableOpacity
                             activeOpacity={ 0.8 }
                         >
@@ -43,7 +44,19 @@ export default class PhotoItem extends Component {
                                 source={{ uri: photo.user.profile_image.medium }}
                             />
                         </TouchableOpacity>
-                        <Text style={{ lineHeight: 30, }}>{ photo.user.name }</Text>
+                        <Text style={ styles.username }>{ photo.user.name }</Text>
+                        <TouchableOpacity
+                            style={ styles.heart }
+                            onPress={ this.onLike.bind(this) }
+                            activeOpacity={ 0.8 }
+                        >
+                            <Icon
+                                style={{ lineHeight: 30, textAlign: 'right', }}
+                                name={ this.state.isLiked ? 'heart' : 'heart-o' }
+                                size={ 24 }
+                                color="red"
+                            />
+                        </TouchableOpacity>
                     </View>
                 </View>
         );
@@ -64,6 +77,11 @@ export default class PhotoItem extends Component {
             })
         }
     }
+    onLike() {
+        this.setState({
+            isLiked: !this.state.isLiked,
+        });
+    }
 }
 
 const styles = StyleSheet.create({
@@ -78,10 +96,23 @@ const styles = StyleSheet.create({
         height: 200,
         flex: 1,
     },
+    info: {
+        flexDirection: 'row',
+        padding: 12,
+        backgroundColor: '#fff',
+    },
     avatar: {
+        flex: 1,
         width: 40,
         height: 40,
         borderRadius: 20,
         marginRight: 12,
+    },
+    username: {
+        flex: 6,
+        lineHeight: 30,
+    },
+    heart: {
+        flex: 1,
     },
 });
