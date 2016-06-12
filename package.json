@@ -24,6 +24,7 @@
     "react-native-parallax": "^0.2.2",
     "react-native-parallax-scroll-view": "^0.18.2",
     "react-native-swiper": "^1.4.5",
+    "react-native-vector-icons": "^2.0.3",
     "unsplash-js": "^4.1.0"
   }
 }

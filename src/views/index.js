@@ -14,6 +14,7 @@ import {
 import Home from './Home';
 import Discover from './Discover';
 import Me from './Me';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Main extends Component {
     constructor(props) {
@@ -34,7 +35,10 @@ export default class Main extends Component {
                 barTintColor="#ddd"
                 style={ styles.tabBar }
             >
-                <TabBarIOS.Item
+                <Icon.TabBarItemIOS
+                    iconName="camera"
+                    selectedIconName="camera"
+                    iconSize={ 24 }
                     title="Photos"
                     selected={ this.state.selectedTab === 'Photos' }
                     onPress={ () => {
@@ -44,8 +48,11 @@ export default class Main extends Component {
                     } }
                 >
                 { this.renderHomeView() }
-                </TabBarIOS.Item>
-                <TabBarIOS.Item
+                </Icon.TabBarItemIOS>
+                <Icon.TabBarItemIOS
+                    iconName="compass"
+                    selectedIconName="compass"
+                    iconSize={ 24 }
                     title="Discover"
                     selected={ this.state.selectedTab === 'Discover' }
                     onPress={ () => {
@@ -55,8 +62,11 @@ export default class Main extends Component {
                     } }
                 >
                 { this.renderDiscoverView() }
-                </TabBarIOS.Item>
-                <TabBarIOS.Item
+                </Icon.TabBarItemIOS>
+                <Icon.TabBarItemIOS
+                    iconName="user"
+                    selectedIconName="user"
+                    iconSize={ 24 }
                     title="Me"
                     selected={ this.state.selectedTab === 'Me' }
                     onPress={ () => {
@@ -66,7 +76,7 @@ export default class Main extends Component {
                     } }
                 >
                 { this.renderMeView() }
-                </TabBarIOS.Item>
+                </Icon.TabBarItemIOS>
             </TabBarIOS>
         );
     }
